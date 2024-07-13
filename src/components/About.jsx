@@ -78,7 +78,6 @@ const About = ({ colors }) => {
                     <div class="embed-responsive embed-responsive-16by9 w-100">
                       <video
                         className="embed-responsive-item w-100 rounded"
-                        autoPlay
                         controls
                       >
                         <source src={VideoOne} type="video/mp4" />
