@@ -37,7 +37,10 @@ const data = [
 
 const ServiceCarousel = ({ colors }) => {
   const ScarouselSection = styled.div`
-    background-color: ${colors.fifthColor};
+    margin-bottom: 100px;
+    div.containerParent {
+      background-color: ${colors.fifthColor};
+    }
     h2 {
       color: ${colors.thirdColor};
     }
@@ -73,28 +76,32 @@ const ServiceCarousel = ({ colors }) => {
   };
   return (
     <ScarouselSection>
-      <div className="container pt-5 text-light">
-        <div className="row">
-          <div className="col col-12">
-            <h2 className="fs-4">SERVICES</h2>
-            <h3 className="fs-2 fw-bolder">Necessitatibus eius consequatur</h3>
-          </div>
-          <div className="col col-12 position-relative cards-box">
-            <Carousel
-              responsive={responsive}
-              autoplay={true}
-              autoPlaySpeed={3000} // Set the speed in milliseconds
-              infinite={true}
-              keyBoardControl={true}
-              transitionDuration={500}
-              showDots={true}
-            >
-              {data.map((d) => (
-                <div className="card overflow-hidden border-0 mx-3">
-                  <img src={d.image} className="w-100" />
-                </div>
-              ))}
-            </Carousel>
+      <div className="containerParent">
+        <div className="container pt-5 text-light">
+          <div className="row">
+            <div className="col col-12">
+              <h2 className="fs-4">SERVICES</h2>
+              <h3 className="fs-2 fw-bolder">
+                Necessitatibus eius consequatur
+              </h3>
+            </div>
+            <div className="col col-12 position-relative cards-box">
+              <Carousel
+                responsive={responsive}
+                autoplay={true}
+                autoPlaySpeed={3000} // Set the speed in milliseconds
+                infinite={true}
+                keyBoardControl={true}
+                transitionDuration={500}
+                showDots={true}
+              >
+                {data.map((d) => (
+                  <div className="card overflow-hidden border-0 mx-3">
+                    <img src={d.image} className="w-100" />
+                  </div>
+                ))}
+              </Carousel>
+            </div>
           </div>
         </div>
       </div>

@@ -4,6 +4,9 @@ import Services from "./components/Services";
 import WhyChooseUs from "./components/WhyChooseUs";
 import About from "./components/About";
 import ServiceCarousel from "./components/ServiceCarousel";
+import Testimonials from "./components/Testimonials";
+import Posts from "./components/Posts";
+import Subscribe from "./components/Subscribe";
 
 const themeColors = {
   firstColor: "#1A5319",
@@ -23,6 +26,9 @@ function App() {
       <WhyChooseUs colors={themeColors}></WhyChooseUs>
       <About colors={themeColors}></About>
       <ServiceCarousel colors={themeColors}></ServiceCarousel>
+      <Testimonials colors={themeColors}></Testimonials>
+      <Posts colors={themeColors}></Posts>
+      <Subscribe colors={themeColors}></Subscribe>
     </>
   );
 }
