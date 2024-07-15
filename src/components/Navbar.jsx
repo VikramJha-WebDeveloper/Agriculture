@@ -11,19 +11,14 @@ const Navbar = ({ colors }) => {
     background-color: ${colors.fifthColor};
 
     z-index: 2;
-    a {
-      transition-duration: 0.3s;
-    }
-    a:hover {
-      background-color: white;
-      color: ${colors.fifthColor} !important;
-    }
   `;
   return (
     <>
       <NavSection className="navbar navbar-expand-lg" data-bs-theme="dark">
         <div className="container">
-          <a className="navbar-brand fw-bolder text-light">Agriculture</a>
+          <NavLink to="/" className="navbar-brand fw-bolder text-light">
+            Agriculture
+          </NavLink>
           <button
             className="navbar-toggler"
             data-bs-toggle="collapse"

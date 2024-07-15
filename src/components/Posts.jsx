@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 // import images
 import Image1 from "/images/postImg1.jpg";
@@ -65,10 +66,10 @@ const Posts = ({ colors }) => {
                   </ol>
                 </div>
                 <hr />
-                <a href="#" className="btn">
+                <NavLink to="/newPage" className="btn">
                   Read More
                   <i class="fa-solid fa-arrow-right ms-2"></i>
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -94,10 +95,10 @@ const Posts = ({ colors }) => {
                   </ol>
                 </div>
                 <hr />
-                <a href="#" className="btn">
+                <NavLink to="/newPage2" className="btn">
                   Read More
                   <i class="fa-solid fa-arrow-right ms-2"></i>
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -125,10 +126,10 @@ const Posts = ({ colors }) => {
                   </ol>
                 </div>
                 <hr />
-                <a href="#" className="btn">
+                <NavLink to="/newPage3" className="btn">
                   Read More
                   <i class="fa-solid fa-arrow-right ms-2"></i>
-                </a>
+                </NavLink>
               </div>
             </div>
           </div>
