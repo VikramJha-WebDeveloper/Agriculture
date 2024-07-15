@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Navbar = ({ colors }) => {
   const NavSection = styled.nav`
@@ -8,6 +9,7 @@ const Navbar = ({ colors }) => {
     left: 0;
     top: 0;
     background-color: ${colors.fifthColor};
+
     z-index: 2;
     a {
       transition-duration: 0.3s;
@@ -32,29 +34,41 @@ const Navbar = ({ colors }) => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="ms-auto navbar-nav">
               <li className="nav-item">
-                <a href="#" className="nav-link mx-2 text-light rounded">
+                <NavLink to="/" className="nav-link mx-2 text-light rounded">
                   Home
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link mx-2 text-light rounded">
+                <NavLink
+                  to="/about"
+                  className="nav-link mx-2 text-light rounded"
+                >
                   About Us
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link mx-2 text-light rounded">
+                <NavLink
+                  to="/services"
+                  className="nav-link mx-2 text-light rounded"
+                >
                   Our Services
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link mx-2 text-light rounded">
+                <NavLink
+                  to="/testimonials"
+                  className="nav-link mx-2 text-light rounded"
+                >
                   Testimonials
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link mx-2 text-light rounded">
+                <NavLink
+                  to="/blog"
+                  className="nav-link mx-2 text-light rounded"
+                >
                   Blog
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item dropdown mx-2">
                 <a
@@ -91,9 +105,9 @@ const Navbar = ({ colors }) => {
                 </ul>
               </li>
               <li className="nav-item">
-                <a href="#" className="nav-link text-light rounded">
+                <NavLink to="/contact" className="nav-link text-light rounded">
                   Contact
-                </a>
+                </NavLink>
               </li>
             </ul>
           </div>

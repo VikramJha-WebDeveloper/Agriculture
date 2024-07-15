@@ -1,13 +1,11 @@
+import AboutPage from "./Pages/AboutPage";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Services from "./components/Services";
-import WhyChooseUs from "./components/WhyChooseUs";
-import About from "./components/About";
-import ServiceCarousel from "./components/ServiceCarousel";
-import Testimonials from "./components/Testimonials";
-import Posts from "./components/Posts";
-import Subscribe from "./components/Subscribe";
-import Footer from "./components/Footer";
+import HomePage from "./Pages/HomePage";
+import { Routes, Route } from "react-router-dom";
+import ServicePage from "./Pages/ServicesPage";
+import TestimonialsPage from "./Pages/TestimonialsPage";
+import BlogPage from "./Pages/BlogPage";
+import ContactPage from "./Pages/ContactPage";
 
 const themeColors = {
   firstColor: "#1A5319",
@@ -22,15 +20,23 @@ function App() {
   return (
     <>
       <Navbar colors={themeColors}></Navbar>
-      <Hero></Hero>
-      <Services colors={themeColors}></Services>
-      <WhyChooseUs colors={themeColors}></WhyChooseUs>
-      <About colors={themeColors}></About>
-      <ServiceCarousel colors={themeColors}></ServiceCarousel>
-      <Testimonials colors={themeColors}></Testimonials>
-      <Posts colors={themeColors}></Posts>
-      <Subscribe colors={themeColors}></Subscribe>
-      <Footer colors={themeColors}></Footer>
+      <Routes>
+        <Route
+          path="/"
+          element={<HomePage colors={themeColors}></HomePage>}
+        ></Route>
+        <Route
+          path="/about"
+          element={<AboutPage colors={themeColors}></AboutPage>}
+        ></Route>
+        <Route path="/services" element={<ServicePage></ServicePage>}></Route>
+        <Route
+          path="/testimonials"
+          element={<TestimonialsPage></TestimonialsPage>}
+        ></Route>
+        <Route path="/blog" element={<BlogPage></BlogPage>}></Route>
+        <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
+      </Routes>
     </>
   );
 }
