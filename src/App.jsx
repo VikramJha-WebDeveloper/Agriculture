@@ -9,6 +9,7 @@ import ContactPage from "./Pages/ContactPage";
 import NewPage from "./Pages/NewPage";
 import NewPage2 from "./Pages/NewPage2";
 import NewPage3 from "./Pages/NewPage3";
+import styled from "styled-components";
 
 const themeColors = {
   firstColor: "#1A5319",
@@ -20,29 +21,34 @@ const themeColors = {
 };
 
 function App() {
+  const Pages = styled.div`
+    margin-top: 56px;
+  `;
   return (
     <>
       <Navbar colors={themeColors}></Navbar>
-      <Routes>
-        <Route
-          path="/"
-          element={<HomePage colors={themeColors}></HomePage>}
-        ></Route>
-        <Route
-          path="/about"
-          element={<AboutPage colors={themeColors}></AboutPage>}
-        ></Route>
-        <Route path="/services" element={<ServicePage></ServicePage>}></Route>
-        <Route
-          path="/testimonials"
-          element={<TestimonialsPage></TestimonialsPage>}
-        ></Route>
-        <Route path="/blog" element={<BlogPage></BlogPage>}></Route>
-        <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
-        <Route path="/newPage" element={<NewPage></NewPage>}></Route>
-        <Route path="/newPage2" element={<NewPage2></NewPage2>}></Route>
-        <Route path="/newPage3" element={<NewPage3></NewPage3>}></Route>
-      </Routes>
+      <Pages>
+        <Routes>
+          <Route
+            path="/"
+            element={<HomePage colors={themeColors}></HomePage>}
+          ></Route>
+          <Route
+            path="/about"
+            element={<AboutPage colors={themeColors}></AboutPage>}
+          ></Route>
+          <Route path="/services" element={<ServicePage></ServicePage>}></Route>
+          <Route
+            path="/testimonials"
+            element={<TestimonialsPage></TestimonialsPage>}
+          ></Route>
+          <Route path="/blog" element={<BlogPage></BlogPage>}></Route>
+          <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
+          <Route path="/newPage" element={<NewPage></NewPage>}></Route>
+          <Route path="/newPage2" element={<NewPage2></NewPage2>}></Route>
+          <Route path="/newPage3" element={<NewPage3></NewPage3>}></Route>
+        </Routes>
+      </Pages>
     </>
   );
 }

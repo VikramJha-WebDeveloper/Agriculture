@@ -1,9 +1,11 @@
 import React from "react";
+import PageHeadings from "../components/PageHeadings";
 
 const ServicePage = () => {
+  const page = "Service Page";
   return (
     <>
-      <h1>Service Page</h1>
+      <PageHeadings page={page}></PageHeadings>
     </>
   );
 };

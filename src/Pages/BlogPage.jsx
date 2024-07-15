@@ -1,9 +1,11 @@
 import React from "react";
+import PageHeadings from "../components/PageHeadings";
 
 const BlogPage = () => {
+  const page = "Blog Page";
   return (
     <>
-      <h1>Blog Page</h1>
+      <PageHeadings page={page}></PageHeadings>
     </>
   );
 };

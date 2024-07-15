@@ -9,7 +9,6 @@ const Navbar = ({ colors }) => {
     left: 0;
     top: 0;
     background-color: ${colors.fifthColor};
-
     z-index: 2;
   `;
   return (

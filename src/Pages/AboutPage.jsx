@@ -1,10 +1,10 @@
 import React from "react";
+import styled from "styled-components";
+import PageHeadings from "../components/PageHeadings";
 
 const AboutPage = () => {
-  return (
-    <>
-      <h1>About Page</h1>
-    </>
-  );
+  const page = "About Page";
+
+  return <PageHeadings page={page}></PageHeadings>;
 };
 export default AboutPage;

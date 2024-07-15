@@ -16,7 +16,7 @@ const Hero = () => {
   });
   const HeroSection = styled.div`
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 56px);
     .black-overlay {
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
     }

@@ -1,9 +1,11 @@
 import React from "react";
+import PageHeadings from "../components/PageHeadings";
 
 const ContactPage = () => {
+  const page = "Contact Page";
   return (
     <>
-      <h1>Contact Page</h1>
+      <PageHeadings page={page}></PageHeadings>
     </>
   );
 };
