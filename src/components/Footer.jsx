@@ -36,18 +36,13 @@ const Footer = ({ colors }) => {
       transition-duration: 0.3s;
     }
     .social-medias {
-      margin: 0px 7px;
-      border: 2px solid ${colors.secondColor};
+      margin: 0px 3px;
+      /* border: 2px solid ${colors.secondColor}; */
       width: 30px;
       height: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition-duration: 0.3s;
-
-      &:hover {
-        background-color: ${colors.secondColor};
-      }
       &:hover i {
         color: white;
       }
@@ -152,7 +147,7 @@ const Footer = ({ colors }) => {
         </div>
       </div>
       <div style={{ backgroundColor: "black" }}>
-        <div className="container">
+        <div className="container py-4">
           <div className="row">
             <div className="col col-12 col-lg-6 d-flex mt-3 mt-lg-0 order-2 order-lg-1">
               <div className="mx-auto ms-lg-0 d-inline-block">
@@ -168,22 +163,22 @@ const Footer = ({ colors }) => {
               <div className="d-flex mx-auto me-lg-0">
                 <div className="social-medias rounded">
                   <a href="#" className="m-0 p-0">
-                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-brands fa-x-twitter fs-4"></i>
                   </a>
                 </div>
                 <div className="social-medias rounded">
                   <a href="#" className="m-0 p-0">
-                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-facebook fs-4"></i>
                   </a>
                 </div>
                 <div className="social-medias rounded">
                   <a href="#" className="m-0 p-0">
-                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-instagram fs-4"></i>
                   </a>
                 </div>
                 <div className="social-medias rounded">
                   <a href="#" className="m-0 p-0">
-                    <i class="fa-brands fa-linkedin"></i>
+                    <i class="fa-brands fa-linkedin fs-4"></i>
                   </a>
                 </div>
               </div>
