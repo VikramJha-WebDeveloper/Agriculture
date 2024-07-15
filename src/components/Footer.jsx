@@ -27,8 +27,9 @@ const Footer = ({ colors }) => {
       background-color: ${colors.secondColor};
       margin-top: 10px;
     }
-    small span {
+    small span a {
       color: ${colors.secondColor};
+      text-decoration: none;
     }
     .social-medias i {
       font-size: 20px;
@@ -155,7 +156,10 @@ const Footer = ({ colors }) => {
                 Rights Reserved
                 <br></br>
                 <small>
-                  Designed by <span>BootstrapMade</span>
+                  Designed by{" "}
+                  <span>
+                    <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                  </span>
                 </small>
               </div>
             </div>

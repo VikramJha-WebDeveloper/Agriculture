@@ -21,9 +21,7 @@ const Posts = ({ colors }) => {
         text-decoration: none;
       }
     }
-    .card {
-      cursor: pointer;
-    }
+
     .card h5,
     .card a.btn {
       transition-duration: 0.3s;
