@@ -9,7 +9,6 @@ import ImageFour from "/images/testimonialImg4.jpg";
 
 const Testimonials = ({ colors }) => {
   const TestimonialsSection = styled.div`
-    background-color: ${colors.fourthColor};
     h2 {
       color: ${colors.secondColor};
     }

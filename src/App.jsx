@@ -7,6 +7,7 @@ import ServiceCarousel from "./components/ServiceCarousel";
 import Testimonials from "./components/Testimonials";
 import Posts from "./components/Posts";
 import Subscribe from "./components/Subscribe";
+import Footer from "./components/Footer";
 
 const themeColors = {
   firstColor: "#1A5319",
@@ -29,6 +30,7 @@ function App() {
       <Testimonials colors={themeColors}></Testimonials>
       <Posts colors={themeColors}></Posts>
       <Subscribe colors={themeColors}></Subscribe>
+      <Footer colors={themeColors}></Footer>
     </>
   );
 }
