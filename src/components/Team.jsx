@@ -62,18 +62,18 @@ const Team = () => {
 
   const TeamSection = styled.div`
     a {
-      color: white !important;
+      color: ${themeColor.secondColor} !important;
       transition-duration: 0.3s;
       .icon {
-        background-color: ${themeColor.secondColor};
+        background-color: white;
         transition-duration: 0.3s;
       }
 
       &:hover {
-        color: ${themeColor.secondColor} !important;
+        color: white !important;
       }
       &:hover .icon {
-        background-color: white;
+        background-color: ${themeColor.secondColor};
       }
     }
   `;
