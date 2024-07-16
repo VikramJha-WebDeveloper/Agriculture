@@ -20,9 +20,9 @@ const datas = [
     name: "Joshu Stefan",
     position: "Farmer",
     socialMedias: {
-      facebook: <CiFacebook className="fs-2 my-1 bg-light p-1" />,
-      xTwitter: <FaXTwitter className="fs-2 my-1 bg-light p-1" />,
-      linkedIn: <CiLinkedin className="fs-2 my-1 bg-light p-1" />,
+      facebook: <CiFacebook className="icon fs-2 my-1 p-1" />,
+      xTwitter: <FaXTwitter className="icon fs-2 my-1 p-1" />,
+      linkedIn: <CiLinkedin className="icon fs-2 my-1 p-1" />,
     },
   },
   {
@@ -30,9 +30,9 @@ const datas = [
     name: "Sheena Anderson",
     position: "Marketing",
     socialMedias: {
-      facebook: <CiFacebook className="fs-2 my-1 bg-light p-1" />,
-      xTwitter: <FaXTwitter className="fs-2 my-1 bg-light p-1" />,
-      linkedIn: <CiLinkedin className="fs-2 my-1 bg-light p-1" />,
+      facebook: <CiFacebook className="icon fs-2 my-1 p-1" />,
+      xTwitter: <FaXTwitter className="icon fs-2 my-1 p-1" />,
+      linkedIn: <CiLinkedin className="icon fs-2 my-1 p-1" />,
     },
   },
   {
@@ -40,9 +40,9 @@ const datas = [
     name: "Evan Smith",
     position: "Content",
     socialMedias: {
-      facebook: <CiFacebook className="fs-2 my-1 bg-light p-1" />,
-      xTwitter: <FaXTwitter className="fs-2 my-1 bg-light p-1" />,
-      linkedIn: <CiLinkedin className="fs-2 my-1 bg-light p-1" />,
+      facebook: <CiFacebook className="icon fs-2 my-1 p-1" />,
+      xTwitter: <FaXTwitter className="icon fs-2 my-1 p-1" />,
+      linkedIn: <CiLinkedin className="icon fs-2 my-1 p-1" />,
     },
   },
   {
@@ -50,9 +50,9 @@ const datas = [
     name: "Kaylie Jones",
     position: "Accountant",
     socialMedias: {
-      facebook: <CiFacebook className="fs-2 my-1 bg-light p-1" />,
-      xTwitter: <FaXTwitter className="fs-2 my-1 bg-light p-1" />,
-      linkedIn: <CiLinkedin className="fs-2 my-1 bg-light p-1" />,
+      facebook: <CiFacebook className="icon fs-2 my-1 p-1" />,
+      xTwitter: <FaXTwitter className="icon fs-2 my-1 p-1" />,
+      linkedIn: <CiLinkedin className="icon fs-2 my-1 p-1" />,
     },
   },
 ];
@@ -62,7 +62,19 @@ const Team = () => {
 
   const TeamSection = styled.div`
     a {
-      color: ${themeColor.secondColor};
+      color: white !important;
+      transition-duration: 0.3s;
+      .icon {
+        background-color: ${themeColor.secondColor};
+        transition-duration: 0.3s;
+      }
+
+      &:hover {
+        color: ${themeColor.secondColor} !important;
+      }
+      &:hover .icon {
+        background-color: white;
+      }
     }
   `;
   return (
