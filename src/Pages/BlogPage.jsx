@@ -2,7 +2,7 @@ import React from "react";
 import PageHeadings from "../components/PageHeadings";
 
 const BlogPage = () => {
-  const page = "Blog Page";
+  const page = "Blog";
   return (
     <>
       <PageHeadings page={page}></PageHeadings>

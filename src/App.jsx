@@ -33,10 +33,7 @@ function App() {
             path="/"
             element={<HomePage colors={themeColors}></HomePage>}
           ></Route>
-          <Route
-            path="/about"
-            element={<AboutPage colors={themeColors}></AboutPage>}
-          ></Route>
+          <Route path="/about" element={<AboutPage></AboutPage>}></Route>
           <Route path="/services" element={<ServicePage></ServicePage>}></Route>
           <Route
             path="/testimonials"
