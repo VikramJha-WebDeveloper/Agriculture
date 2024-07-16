@@ -1,5 +1,6 @@
-import React from "react";
+import { React, useContext } from "react";
 import styled from "styled-components";
+import { colors } from "../App";
 
 // import images
 import Planting from "/images/planting.jpg";
@@ -62,10 +63,11 @@ const data = [
   },
 ];
 
-const Services = ({ colors }) => {
+const Services = () => {
+  const themeColors = useContext(colors);
   const ServicesSection = styled.div`
     h2 {
-      color: ${colors.firstColor};
+      color: ${themeColors.firstColor};
     }
   `;
   return (

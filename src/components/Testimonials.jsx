@@ -1,5 +1,6 @@
-import React from "react";
+import { React, useContext } from "react";
 import styled from "styled-components";
+import { colors } from "../App";
 
 // import images
 import ImageOne from "/images/testimonialImg1.jpg";
@@ -7,10 +8,11 @@ import ImageTwo from "/images/testimonialImg2.jpg";
 import ImageThree from "/images/testimonialImg3.jpg";
 import ImageFour from "/images/testimonialImg4.jpg";
 
-const Testimonials = ({ colors }) => {
+const Testimonials = () => {
+  const themeColors = useContext(colors);
   const TestimonialsSection = styled.div`
     h2 {
-      color: ${colors.secondColor};
+      color: ${themeColors.secondColor};
     }
     h2,
     h4 {
@@ -18,7 +20,7 @@ const Testimonials = ({ colors }) => {
     }
     h4 {
       font-weight: normal;
-      color: ${colors.secondColor};
+      color: ${themeColors.secondColor};
     }
   `;
   return (

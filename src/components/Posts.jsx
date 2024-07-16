@@ -1,16 +1,18 @@
-import React from "react";
+import { React, useContext } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { colors } from "../App";
 
 // import images
 import Image1 from "/images/postImg1.jpg";
 import Image2 from "/images/postImg2.jpg";
 import Image3 from "/images/postImg3.jpg";
 
-const Posts = ({ colors }) => {
+const Posts = () => {
+  const themeColors = useContext(colors);
   const PostsSection = styled.div`
     h2 {
-      color: ${colors.secondColor};
+      color: ${themeColors.secondColor};
     }
     i {
       margin-right: 12.5px;
@@ -29,7 +31,7 @@ const Posts = ({ colors }) => {
     }
     .card:hover h5,
     .card:hover a.btn {
-      color: ${colors.secondColor};
+      color: ${themeColors.secondColor};
     }
   `;
   return (

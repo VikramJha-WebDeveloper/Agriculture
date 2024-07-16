@@ -1,5 +1,6 @@
-import React from "react";
+import { React, useContext } from "react";
 import styled from "styled-components";
+import { colors } from "../App";
 
 // import videos
 import VideoOne from "/videos/video-one.mp4";
@@ -7,15 +8,16 @@ import VideoOne from "/videos/video-one.mp4";
 // import images
 import VideoImg from "/images/videoImg.jpg";
 
-const About = ({ colors }) => {
+const About = () => {
+  const themeColors = useContext(colors);
   const AboutSection = styled.div`
     button {
-      background-color: ${colors.firstColor};
+      background-color: ${themeColors.firstColor};
     }
     .play {
       width: 80px;
       height: 80px;
-      background-color: ${colors.secondColor};
+      background-color: ${themeColors.secondColor};
       display: flex;
       align-items: center;
       justify-content: center;

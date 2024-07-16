@@ -1,7 +1,8 @@
-import React from "react";
+import { React, useContext } from "react";
 import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { colors } from "../App";
 
 // import images
 import Harvesting from "/images/we-do-harvesting.jpg";
@@ -35,14 +36,15 @@ const data = [
   },
 ];
 
-const ServiceCarousel = ({ colors }) => {
+const ServiceCarousel = () => {
+  const themeColors = useContext(colors);
   const ScarouselSection = styled.div`
     margin-bottom: 100px;
     div.containerParent {
-      background-color: ${colors.fifthColor};
+      background-color: ${themeColors.fifthColor};
     }
     h2 {
-      color: ${colors.thirdColor};
+      color: ${themeColors.thirdColor};
     }
     .cards-box {
       top: 50px;

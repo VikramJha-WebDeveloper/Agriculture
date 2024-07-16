@@ -1,9 +1,11 @@
-import React from "react";
+import { React, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import backgroundImage from "/images/pageHeadingImg.jpg";
+import { colors } from "../App";
 
 const PageHeadings = ({ page, description }) => {
+  const themeColors = useContext(colors);
   const Heading = styled.div`
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
       url(${backgroundImage});
@@ -17,6 +19,9 @@ const PageHeadings = ({ page, description }) => {
     .breadcrumb-item + .breadcrumb-item::before {
       content: " / ";
       color: white;
+    }
+    a {
+      color: ${themeColors.secondColor};
     }
   `;
   return (

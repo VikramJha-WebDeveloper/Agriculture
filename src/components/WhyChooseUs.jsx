@@ -1,16 +1,18 @@
-import React from "react";
+import { React, useContext } from "react";
 import styled from "styled-components";
+import { colors } from "../App";
 
 // import images
 import HappyFarmer from "/images/HappyFarmer.jpg";
 
-const WhyChooseUs = ({ colors }) => {
+const WhyChooseUs = () => {
+  const themeColors = useContext(colors);
   const ChooseSection = styled.div`
-    background-color: ${colors.firstColor};
+    background-color: ${themeColors.firstColor};
     color: white;
     p,
     h3 {
-      color: ${colors.thirdColor};
+      color: ${themeColors.thirdColor};
     }
     img {
       bottom: 50px;

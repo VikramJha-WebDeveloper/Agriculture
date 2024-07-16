@@ -1,9 +1,11 @@
-import React from "react";
+import { React, useContext } from "react";
 import styled from "styled-components";
+import { colors } from "../App";
 
-const Footer = ({ colors }) => {
+const Footer = () => {
+  const themeColors = useContext(colors);
   const FooterSection = styled.div`
-    background-color: ${colors.fifthColor};
+    background-color: ${themeColors.fifthColor};
     color: white;
 
     ul,
@@ -15,7 +17,7 @@ const Footer = ({ colors }) => {
         text-decoration: none;
         transition-duration: 0.3s;
         &:hover {
-          color: ${colors.secondColor};
+          color: ${themeColors.secondColor};
         }
       }
     }
@@ -24,16 +26,16 @@ const Footer = ({ colors }) => {
       display: block;
       height: 3px;
       width: 15%;
-      background-color: ${colors.secondColor};
+      background-color: ${themeColors.secondColor};
       margin-top: 10px;
     }
     small span a {
-      color: ${colors.secondColor};
+      color: ${themeColors.secondColor};
       text-decoration: none;
     }
     .social-medias i {
       font-size: 20px;
-      color: ${colors.secondColor};
+      color: ${themeColors.secondColor};
       transition-duration: 0.3s;
     }
     .social-medias {

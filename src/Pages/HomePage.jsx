@@ -13,14 +13,14 @@ const HomePage = ({ colors }) => {
   return (
     <>
       <Hero></Hero>
-      <Services colors={colors}></Services>
-      <WhyChooseUs colors={colors}></WhyChooseUs>
-      <About colors={colors}></About>
-      <ServiceCarousel colors={colors}></ServiceCarousel>
-      <Testimonials colors={colors}></Testimonials>
-      <Posts colors={colors}></Posts>
-      <Subscribe colors={colors}></Subscribe>
-      <Footer colors={colors}></Footer>
+      <Services></Services>
+      <WhyChooseUs></WhyChooseUs>
+      <About></About>
+      <ServiceCarousel></ServiceCarousel>
+      <Testimonials></Testimonials>
+      <Posts></Posts>
+      <Subscribe></Subscribe>
+      <Footer></Footer>
     </>
   );
 };

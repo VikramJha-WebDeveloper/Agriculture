@@ -1,16 +1,16 @@
 import { React, useContext } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { color } from "../App";
+import { colors } from "../App";
 
 const Navbar = () => {
-  const themeColor = useContext(color);
+  const themeColors = useContext(colors);
   const NavSection = styled.nav`
     position: fixed;
     width: 100%;
     left: 0;
     top: 0;
-    background-color: ${themeColor.fifthColor};
+    background-color: ${themeColors.fifthColor};
     z-index: 2;
   `;
   return (

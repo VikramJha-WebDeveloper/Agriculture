@@ -1,15 +1,17 @@
-import React from "react";
+import { React, useContext } from "react";
 import styled from "styled-components";
+import { colors } from "../App";
 
-const Subscribe = ({ colors }) => {
+const Subscribe = () => {
+  const themeColors = useContext(colors);
   const SubscribeSection = styled.div`
-    background-color: ${colors.fourthColor};
+    background-color: ${themeColors.fourthColor};
     button {
-      background-color: ${colors.firstColor};
+      background-color: ${themeColors.firstColor};
       color: white;
     }
     div.input-group {
-      border: 2px solid ${colors.firstColor};
+      border: 2px solid ${themeColors.firstColor};
     }
     input:focus {
       box-shadow: none;

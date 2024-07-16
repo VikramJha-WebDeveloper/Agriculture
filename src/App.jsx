@@ -12,7 +12,7 @@ import NewPage2 from "./Pages/NewPage2";
 import NewPage3 from "./Pages/NewPage3";
 import styled from "styled-components";
 
-const color = createContext();
+const colors = createContext();
 
 function App() {
   const themeColors = {
@@ -28,7 +28,7 @@ function App() {
   `;
   return (
     <>
-      <color.Provider value={themeColors}>
+      <colors.Provider value={themeColors}>
         <Navbar></Navbar>
 
         <Pages>
@@ -56,10 +56,10 @@ function App() {
             <Route path="/newPage3" element={<NewPage3></NewPage3>}></Route>
           </Routes>
         </Pages>
-      </color.Provider>
+      </colors.Provider>
     </>
   );
 }
 
 export default App;
-export { color };
+export { colors };
