@@ -8,6 +8,51 @@ import Image1 from "/images/postImg1.jpg";
 import Image2 from "/images/postImg2.jpg";
 import Image3 from "/images/postImg3.jpg";
 
+const datas = [
+  {
+    img: Image1,
+    title: "Lorem ipsum dolor sit amet consectetur.",
+    name: "Julia Parker",
+    position: "Politics",
+    date: "December 12",
+  },
+  {
+    img: Image2,
+    title: "Lorem ipsum dolor sit amet.",
+    name: "Mario Dauglas",
+    position: "Sports",
+    date: "July 17",
+  },
+  {
+    img: Image3,
+    title: "Lorem ipsum dolor sit amet consectetur.",
+    name: "Lisa Hunter",
+    position: "Economics",
+    date: "September 05",
+  },
+  {
+    img: Image3,
+    title: "Lorem ipsum dolor sit amet consectetur.",
+    name: "Lisa Hunter",
+    position: "Economics",
+    date: "September 05",
+  },
+  {
+    img: Image1,
+    title: "Lorem ipsum dolor sit amet consectetur.",
+    name: "Julia Parker",
+    position: "Politics",
+    date: "December 12",
+  },
+  {
+    img: Image2,
+    title: "Lorem ipsum dolor sit amet.",
+    name: "Mario Dauglas",
+    position: "Sports",
+    date: "July 17",
+  },
+];
+
 const Posts = () => {
   const themeColors = useContext(colors);
   const PostsSection = styled.div`
@@ -33,6 +78,16 @@ const Posts = () => {
     .card:hover a.btn {
       color: ${themeColors.secondColor};
     }
+    .card .badge {
+      background-color: ${themeColors.firstColor};
+      bottom: -13.6px;
+    }
+    .card .img-parent img {
+      transition-duration: 0.5s;
+    }
+    .card:hover img {
+      transform: scale(1.1);
+    }
   `;
   return (
     <PostsSection>
@@ -44,97 +99,42 @@ const Posts = () => {
           </div>
         </div>
         <div className="row mt-3">
-          <div className="col col-12 col-xl-4 col-md-6 mt-3">
-            <div className="card overflow-hidden">
-              <img src={Image1} />
-              <div className="card-body">
-                <h5 className="card-title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h5>
-                <div>
-                  <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <a href="#">
-                        <i class="fa-solid fa-user"></i>
-                        Julia Parker
-                      </a>
-                    </li>
-                    <li className="breadcrumb-item">
-                      <a href="#">
-                        <i class="fa-solid fa-folder"></i>
-                        Politics
-                      </a>
-                    </li>
-                  </ol>
+          {datas.map((d) => (
+            <div className="col col-12 col-xl-4 col-md-6 mt-3">
+              <div className="card overflow-hidden">
+                <div className="w-100 position-relative img-parent">
+                  <img src={d.img} className="w-100" />
+                  <div className="position-absolute end-0 badge fs-6 text-uppercase">
+                    {d.date}
+                  </div>
                 </div>
-                <hr />
-                <NavLink to="/newPage" className="btn">
-                  Read More
-                  <i class="fa-solid fa-arrow-right ms-2"></i>
-                </NavLink>
+                <div className="card-body">
+                  <h5 className="card-title">{d.title}</h5>
+                  <div>
+                    <ol className="breadcrumb">
+                      <li className="breadcrumb-item">
+                        <a href="#">
+                          <i class="fa-solid fa-user"></i>
+                          {d.name}
+                        </a>
+                      </li>
+                      <li className="breadcrumb-item">
+                        <a href="#">
+                          <i class="fa-solid fa-folder"></i>
+                          {d.position}
+                        </a>
+                      </li>
+                    </ol>
+                  </div>
+                  <hr />
+                  <NavLink to="/newPage" className="btn">
+                    Read More
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+                  </NavLink>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col col-12 col-xl-4 col-md-6 mt-3">
-            <div className="card overflow-hidden">
-              <img src={Image2} />
-              <div className="card-body">
-                <h5 className="card-title">Lorem ipsum dolor sit amet.</h5>
-                <div>
-                  <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <a href="#">
-                        <i class="fa-solid fa-user"></i>
-                        Mario Dauglas
-                      </a>
-                    </li>
-                    <li className="breadcrumb-item">
-                      <a href="#">
-                        <i class="fa-solid fa-folder"></i>
-                        Sports
-                      </a>
-                    </li>
-                  </ol>
-                </div>
-                <hr />
-                <NavLink to="/newPage2" className="btn">
-                  Read More
-                  <i class="fa-solid fa-arrow-right ms-2"></i>
-                </NavLink>
-              </div>
-            </div>
-          </div>
-          <div className="col col-12 col-xl-4 col-md-6 mt-3">
-            <div className="card overflow-hidden">
-              <img src={Image3} />
-              <div className="card-body">
-                <h5 className="card-title">
-                  Lorem ipsum dolor sit amet consectetur.
-                </h5>
-                <div>
-                  <ol className="breadcrumb">
-                    <li className="breadcrumb-item">
-                      <a href="#">
-                        <i class="fa-solid fa-user"></i>
-                        Lisa Hunter
-                      </a>
-                    </li>
-                    <li className="breadcrumb-item">
-                      <a href="#">
-                        <i class="fa-solid fa-folder"></i>
-                        Economics
-                      </a>
-                    </li>
-                  </ol>
-                </div>
-                <hr />
-                <NavLink to="/newPage3" className="btn">
-                  Read More
-                  <i class="fa-solid fa-arrow-right ms-2"></i>
-                </NavLink>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </PostsSection>
