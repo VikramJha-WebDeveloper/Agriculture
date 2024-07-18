@@ -8,8 +8,6 @@ import TestimonialsPage from "./Pages/TestimonialsPage";
 import BlogPage from "./Pages/BlogPage";
 import ContactPage from "./Pages/ContactPage";
 import NewPage from "./Pages/NewPage";
-import NewPage2 from "./Pages/NewPage2";
-import NewPage3 from "./Pages/NewPage3";
 import styled from "styled-components";
 
 const colors = createContext();
@@ -52,8 +50,6 @@ function App() {
               element={<ContactPage></ContactPage>}
             ></Route>
             <Route path="/newPage" element={<NewPage></NewPage>}></Route>
-            <Route path="/newPage2" element={<NewPage2></NewPage2>}></Route>
-            <Route path="/newPage3" element={<NewPage3></NewPage3>}></Route>
           </Routes>
         </Pages>
       </colors.Provider>

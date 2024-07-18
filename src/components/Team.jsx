@@ -1,7 +1,8 @@
-import { React, useContext } from "react";
+import { React, useContext, useEffect } from "react";
 import { colors } from "../App";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import AOS from "aos";
 
 // import react icons
 import { CiFacebook } from "react-icons/ci";
@@ -24,6 +25,7 @@ const datas = [
       xTwitter: <FaXTwitter className="icon fs-2 my-1 p-1" />,
       linkedIn: <CiLinkedin className="icon fs-2 my-1 p-1" />,
     },
+    flip_aos: "flip-left",
   },
   {
     img: Marketing,
@@ -34,6 +36,7 @@ const datas = [
       xTwitter: <FaXTwitter className="icon fs-2 my-1 p-1" />,
       linkedIn: <CiLinkedin className="icon fs-2 my-1 p-1" />,
     },
+    flip_aos: "flip-left",
   },
   {
     img: Content,
@@ -44,6 +47,7 @@ const datas = [
       xTwitter: <FaXTwitter className="icon fs-2 my-1 p-1" />,
       linkedIn: <CiLinkedin className="icon fs-2 my-1 p-1" />,
     },
+    flip_aos: "flip-left",
   },
   {
     img: Accountant,
@@ -54,11 +58,17 @@ const datas = [
       xTwitter: <FaXTwitter className="icon fs-2 my-1 p-1" />,
       linkedIn: <CiLinkedin className="icon fs-2 my-1 p-1" />,
     },
+    flip_aos: "flip-left",
   },
 ];
 
 const Team = () => {
   const themeColor = useContext(colors);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  });
 
   const TeamSection = styled.div`
     a {
@@ -88,7 +98,10 @@ const Team = () => {
         </div>
         <div className="row pt-3">
           {datas.map((d) => (
-            <div className="col col-12 col-lg-3 col-md-6 mt-3">
+            <div
+              className="col col-12 col-lg-3 col-md-6 mt-3"
+              data-aos={`${d.flip_aos}`}
+            >
               <div className="card overflow-hidden border-0">
                 <div className=" rounded position-relative">
                   <img src={d.img} className="w-100 rounded" />

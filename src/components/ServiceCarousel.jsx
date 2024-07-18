@@ -1,8 +1,9 @@
-import { React, useContext } from "react";
+import { React, useContext, useEffect } from "react";
 import styled from "styled-components";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { colors } from "../App";
+import AOS from "aos";
 
 // import images
 import Harvesting from "/images/we-do-harvesting.jpg";
@@ -38,6 +39,11 @@ const data = [
 
 const ServiceCarousel = () => {
   const themeColors = useContext(colors);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  });
   const ScarouselSection = styled.div`
     margin-bottom: 100px;
     div.containerParent {
@@ -81,13 +87,16 @@ const ServiceCarousel = () => {
       <div className="containerParent">
         <div className="container pt-5 text-light">
           <div className="row">
-            <div className="col col-12">
+            <div className="col col-12" data-aos="fade-left">
               <h2 className="fs-4">SERVICES</h2>
               <h3 className="fs-2 fw-bolder">
                 Necessitatibus eius consequatur
               </h3>
             </div>
-            <div className="col col-12 position-relative cards-box">
+            <div
+              className="col col-12 position-relative cards-box"
+              data-aos="zoom-in"
+            >
               <Carousel
                 responsive={responsive}
                 autoplay={true}

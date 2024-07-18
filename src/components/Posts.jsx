@@ -1,7 +1,8 @@
-import { React, useContext } from "react";
+import { React, useContext, useEffect } from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { colors } from "../App";
+import AOS from "aos";
 
 // import images
 import Image1 from "/images/postImg1.jpg";
@@ -15,6 +16,7 @@ const datas = [
     name: "Julia Parker",
     position: "Politics",
     date: "December 12",
+    zoom_aos: "zoom-in",
   },
   {
     img: Image2,
@@ -22,6 +24,7 @@ const datas = [
     name: "Mario Dauglas",
     position: "Sports",
     date: "July 17",
+    zoom_aos: "zoom-in",
   },
   {
     img: Image3,
@@ -29,6 +32,7 @@ const datas = [
     name: "Lisa Hunter",
     position: "Economics",
     date: "September 05",
+    zoom_aos: "zoom-in",
   },
   {
     img: Image3,
@@ -36,6 +40,7 @@ const datas = [
     name: "Lisa Hunter",
     position: "Economics",
     date: "September 05",
+    zoom_aos: "zoom-in",
   },
   {
     img: Image1,
@@ -43,6 +48,7 @@ const datas = [
     name: "Julia Parker",
     position: "Politics",
     date: "December 12",
+    zoom_aos: "zoom-in",
   },
   {
     img: Image2,
@@ -50,11 +56,17 @@ const datas = [
     name: "Mario Dauglas",
     position: "Sports",
     date: "July 17",
+    zoom_aos: "zoom-in",
   },
 ];
 
 const Posts = () => {
   const themeColors = useContext(colors);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  });
   const PostsSection = styled.div`
     h2 {
       color: ${themeColors.secondColor};
@@ -93,14 +105,17 @@ const Posts = () => {
     <PostsSection>
       <div className="container py-5">
         <div className="row mt-5">
-          <div className="col col-12">
+          <div className="col col-12" data-aos="zoom-in">
             <h2 className="text-center fw-normal">Recents Posts</h2>
             <h3 className="text-center">Necessitatibus eius consequatur</h3>
           </div>
         </div>
         <div className="row mt-3">
           {datas.map((d) => (
-            <div className="col col-12 col-xl-4 col-md-6 mt-3">
+            <div
+              className="col col-12 col-xl-4 col-md-6 mt-3"
+              data-aos={`${d.zoom_aos}`}
+            >
               <div className="card overflow-hidden">
                 <div className="w-100 position-relative img-parent">
                   <img src={d.img} className="w-100" />
@@ -127,7 +142,10 @@ const Posts = () => {
                     </ol>
                   </div>
                   <hr />
-                  <NavLink to="/newPage" className="btn">
+                  <NavLink
+                    to="https://bootstrapmade.com/demo/templates/AgriCulture/blog-details.html"
+                    className="btn"
+                  >
                     Read More
                     <i class="fa-solid fa-arrow-right ms-2"></i>
                   </NavLink>

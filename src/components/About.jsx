@@ -1,6 +1,7 @@
-import { React, useContext } from "react";
+import { React, useContext, useEffect } from "react";
 import styled from "styled-components";
 import { colors } from "../App";
+import AOS from "aos";
 
 // import videos
 import VideoOne from "/videos/video-one.mp4";
@@ -10,6 +11,12 @@ import VideoImg from "/images/videoImg.jpg";
 
 const About = () => {
   const themeColors = useContext(colors);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  });
+
   const AboutSection = styled.div`
     button {
       background-color: ${themeColors.firstColor};
@@ -36,14 +43,20 @@ const About = () => {
       <div className="container py-5">
         <div className="row">
           <div className="col col-12 col-lg-6 order-2 order-lg-1 d-flex justify-content-center align-items-start flex-column">
-            <h2>Plants Make Life Better</h2>
-            <p>
+            <h2 data-aos="fade-up" data-aos-duration="1000">
+              Plants Make Life Better
+            </h2>
+            <p data-aos="fade-up" data-aos-duration="2000">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim
               necessitatibus placeat, atque qui voluptatem velit explicabo vitae
               repellendus architecto provident nisi ullam minus asperiores
               commodi! Tenetur, repellat aliquam nihil illo.
             </p>
-            <ul className="list-group list-group-flush">
+            <ul
+              className="list-group list-group-flush"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+            >
               <li className="list-group-item border-0">
                 <i className="fa-solid fa-check me-2"></i>
                 Lorem ipsum dolor sit amet
@@ -57,12 +70,19 @@ const About = () => {
                 Repellat aliquam nihil illo
               </li>
             </ul>
-            <button className="btn px-4 py-3 text-light mt-3">
+            <button
+              className="btn px-4 py-3 text-light mt-3"
+              data-aos="fade-up"
+              data-aos-duration="4000"
+            >
               GET IN TOUCH
             </button>
           </div>
           <div className="col col-12 col-lg-6 mb-3 mb-lg-0 order-1 order-lg-2 d-flex justify-content-center align-items-start flex-column">
-            <div className="position-relative d-flex align-items-center justify-content-center">
+            <div
+              className="position-relative d-flex align-items-center justify-content-center"
+              data-aos="zoom-in"
+            >
               <img src={VideoImg} className="rounded w-100"></img>
               <div
                 className="play position-absolute rounded rounded-circle"

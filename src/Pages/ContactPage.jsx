@@ -1,14 +1,20 @@
-import { React, useContext } from "react";
+import { React, useContext, useEffect } from "react";
 import styled from "styled-components";
 import { colors } from "../App";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { FaMobileRetro } from "react-icons/fa6";
+import AOS from "aos";
 
 import PageHeadings from "../components/PageHeadings";
 
 const ContactPage = () => {
   const themeColors = useContext(colors);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  });
 
   const ContactSection = styled.div`
     .card {
@@ -37,8 +43,8 @@ const ContactPage = () => {
       ></iframe>
       <div className="container py-5">
         <div className="row">
-          <div className="col col-12 col-lg-4">
-            <div className="card rounded-">
+          <div className="col col-12 col-lg-4" data-aos="fade-up">
+            <div className="card border-0">
               <div className="card-body">
                 <h4 className="card-title">Get in touch</h4>
                 <p className="cad-text">
@@ -77,7 +83,11 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
-          <div className="col col-12 col-lg-8 mt-5 mt-lg-0">
+          <div
+            className="col col-12 col-lg-8 mt-5 mt-lg-0"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
             <form className="h-100">
               <div className="row gy-3">
                 <div className="col col-12 col-md-6">

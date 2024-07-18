@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 
 const BlogPage = () => {
   const themeColors = useContext(colors);
+
   const BlogSection = styled.div`
     .pagination .active {
       background-color: ${themeColors.firstColor};
